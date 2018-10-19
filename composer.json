@@ -30,7 +30,7 @@
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
         "symfony/web-server-bundle": "*",
-        "fzaninotto/faker": "^1.8",
+        "fzaninotto/faker": "^1.8"
     },
     "config": {
         "preferred-install": {

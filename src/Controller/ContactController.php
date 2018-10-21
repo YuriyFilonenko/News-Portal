@@ -2,32 +2,32 @@
 
 namespace App\Controller;
 
-use App\Service\HomePageServiceInterface;
+use App\Service\ContactPageServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Default site controller.
+ * Description of ContactController.
  *
  * @author Yuriy Filonenko <mail@gmail.com>
  */
-class DefaultController extends AbstractController
+class ContactController extends AbstractController
 {
     private $service;
 
-    public function __construct(HomePageServiceInterface $service)
+    public function __construct(ContactPageServiceInterface $service)
     {
         $this->service = $service;
     }
 
     /**
-     * Home page.
+     * Contact page.
      *
      * @return Response
      */
     public function index(): Response
     {
-        return $this->render('default/index.html.twig', [
+        return $this->render('contact/contact.html.twig', [
             'page' => $this->service->getData(),
         ]);
     }

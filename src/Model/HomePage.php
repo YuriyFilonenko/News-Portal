@@ -7,12 +7,13 @@ namespace App\Model;
  *
  * @author Yuriy Filonenko <mail@gmail.com>
  */
-final class HomePage 
+final class HomePage
 {
     private $firstBlockTitle;
     private $firstBlockText;
     private $firstBlockMainBtn;
     private $firstBlockActionBtn;
+
     public function __construct(
         string $firstBlockTitle,
         string $firstBlockText,
@@ -24,18 +25,22 @@ final class HomePage
         $this->firstBlockMainBtn = $firstBlockMainBtn;
         $this->firstBlockActionBtn = $firstBlockActionBtn;
     }
+
     public function getFirstBlockTitle(): string
     {
         return $this->firstBlockTitle;
     }
+
     public function getFirstBlockText(): string
     {
         return $this->firstBlockText;
     }
+
     public function getFirstBlockMainBtn(): string
     {
         return $this->firstBlockMainBtn;
     }
+
     public function getFirstBlockActionBtn(): string
     {
         return $this->firstBlockActionBtn;

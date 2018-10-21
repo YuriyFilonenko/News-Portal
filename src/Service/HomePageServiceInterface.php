@@ -6,7 +6,7 @@ use App\Model\HomePage;
 
 /**
  * Contract for home page service.
- * 
+ *
  * @author Yuriy Filonenko <mail@gmail.com>
  */
 interface HomePageServiceInterface

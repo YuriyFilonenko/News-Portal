@@ -15,10 +15,10 @@ final class FakeHomePage implements HomePageServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function getData(): HomePage 
+    public function getData(): HomePage
     {
         $faker = Factory::create();
-        
+
         return new HomePage(
             'News Portal',
             $faker->words(25, true),

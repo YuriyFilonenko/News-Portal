@@ -10,7 +10,6 @@
                 <div class="hline"></div>
                 <p>{{ page.getContactText }}</p>
                 <form class="contact-form php-mail-form" role="form" action="" method="POST">
-
                     <div class="form-group">
                         <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name">
                     </div>
@@ -26,10 +25,8 @@
                     <div class="form-send">
                         <button type="submit" class="btn btn-large">Send Message</button>
                     </div>
-
                 </form>
             </div>
-
             <div class="col-lg-4"><br/>
                 <h4>Our Address</h4>
                 <div class="hline"></div>
@@ -37,8 +34,8 @@
                     {{ page.address }}<br/>
                 </p>
                 <p>
-                    {{ page.email }}<br/>
-                    {{ page.telephone }}
+                    Email: <a href="mailto: {{ page.email }}">{{ page.email }}</a><br/>
+                    Phone number: <a href="tel: {{ page.telephone }}">{{ page.telephone }}</a>
                 </p>
                 <p>{{ page.addressText }}</p>
             </div>

@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-use App\Model\Contact;
+use App\Dto\Contact;
 use Faker\Factory;
 
 /**

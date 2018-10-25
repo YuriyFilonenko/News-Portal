@@ -1,0 +1,18 @@
+parameters:
+    app.subscribers_emails_storage: '../var/file_storage/subscribers.csv'
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+    
+  Greeflas\Bundle\NewsletterBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Resources,Dto}'
+    calls:
+        - [setContainer, ['@service_container']]
+
+        
+  Greeflas\Bundle\NewsletterBundle\Controller\DefaultController:
+    tags: ['controller.service_arguments']

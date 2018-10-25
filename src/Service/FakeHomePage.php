@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-use App\Model\HomePage;
+use App\Dto\HomePage;
 use Faker\Factory;
 
 /**

@@ -1,7 +1,7 @@
 <footer class="text-muted">
     <div class="container">
         <p>Подпишитесь на рассылку:</p>
-        <form class="form-inline" role="form" action="/newsletter-subscribe" method="get">
+        <form class="form-inline" role="form" action="{{ path('newsletter_subscribe') }}" method="get">
             <div class="input">
                 <input type="text" class="button" id="email" name="email" placeholder="Email">
                 <input type="submit" class="button" id="submit" value="SEND">

@@ -15,7 +15,7 @@ final class FakeContactPage implements ContactPageServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function getData(): Contact
+    public function getContact(): Contact
     {
         $faker = Factory::create();
 

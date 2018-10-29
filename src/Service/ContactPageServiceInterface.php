@@ -16,5 +16,5 @@ interface ContactPageServiceInterface
      *
      * @return Contact
      */
-    public function getData(): Contact;
+    public function getContact(): Contact;
 }

@@ -23,3 +23,7 @@ services:
         class: App\Service\MessageRecievedMailer
         calls:
             - [setContainer, ['@service_container']]
+            
+    # Aliases
+    App\Service\HomePageServiceInterface: '@App\Service\DatabaseHomePage'
+    App\Service\PostPageServiceInterface: '@App\Service\DatabasePostPage'

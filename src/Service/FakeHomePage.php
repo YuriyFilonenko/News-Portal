@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Dto\HomePage;
+use EmptyIterator;
 use Faker\Factory;
 
 /**
@@ -25,5 +26,21 @@ final class FakeHomePage implements HomePageServiceInterface
             'Read News',
             'Suggest news'
         );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCategories(): iterable
+    {
+        return new EmptyIterator();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLatestPosts(): iterable
+    {
+        return new EmptyIterator();
     }
 }

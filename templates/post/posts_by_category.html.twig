@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ITEA News Portal{% endblock %}
+
+{% block main %}
+<main role="main">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+            {% for post in posts_by_category %}
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="img/{{ post.image }}" alt="">
+                        <div class="card-body">
+                            <b>{{ post.category.title }}</b>
+                            <p class="card-text">
+                                {{ post.title }}
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="{{ path('one_post', {'id':post.id}) }}">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                                    </a>
+                                </div>
+                                <small class="text-muted">Posted: {{ post.createdAt|date('d/m/Y h:i') }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
